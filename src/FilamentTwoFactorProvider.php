@@ -14,8 +14,8 @@ class FilamentTwoFactorProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-        Livewire::component(Auth\Login::getName(), Auth\Login::class);
-        Livewire::component(Auth\TwoFactorChallenge::getName(), Auth\TwoFactorChallenge::class);
+        Livewire::component('auth-login', Auth\Login::class);
+        Livewire::component('auth-two-factor-challenge', Auth\TwoFactorChallenge::class);
         Livewire::component('filament-two-factor-form', TwoFactorAuthenticationForm::class);
     }
 
